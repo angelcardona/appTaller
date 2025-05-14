@@ -13,5 +13,6 @@ public interface InvoiceRepository extends JpaRepository {
 
     List<Invoice> findByVehicleId(String vehicleId);
 
-    Arrays findByDateBetween(LocalDateTime startDate, LocalDateTime endDate);
+    List<Invoice> findByDateBetween(LocalDateTime startDate, LocalDateTime endDate);
+
 }

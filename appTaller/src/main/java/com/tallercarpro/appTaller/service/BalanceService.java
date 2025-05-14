@@ -38,10 +38,12 @@ public class BalanceService {
             throw new ValidationException("Los gastos no pueden ser negativos");
         }
 
-        double incomes = invoiceRepository.findByDateBetween(balance.getStartDate(), balance.getEndDate())
-                .stream()
+        // Obtener facturas y manejar caso de lista vacía
+        List<Invoice> invoices = invoiceRepository.findByDateBetween(balance.getStartDate(), balance.getEndDate());
+        double incomes = invoices != null ? invoices.stream()
                 .mapToDouble(Invoice::getTotal)
-                .sum();
+                .sum() : 0.0;
+
         balance.setIncomes(incomes);
         balance.setBalance(incomes - balance.getExpenses());
 
@@ -72,5 +74,4 @@ public class BalanceService {
         }
         balanceRepository.deleteById(id);
     }
-
 }
