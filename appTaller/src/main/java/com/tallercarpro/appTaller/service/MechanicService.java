@@ -1,6 +1,6 @@
 package com.tallercarpro.appTaller.service;
 
-import com.tallercarpro.appTaller.Repository.MechanicRepository;
+import com.tallercarpro.appTaller.repository.MechanicRepository;
 import com.tallercarpro.appTaller.exception.ResourceNotfoundException;
 import com.tallercarpro.appTaller.exception.ValidationException;
 import com.tallercarpro.appTaller.models.domain.Mechanic;
@@ -45,7 +45,7 @@ public class MechanicService {
     }
 
     @Transactional
-    public Mechanic updateMechanic(Long id, Mechanic mechanic) {
+    public Mechanic updateMechanic(String id, Mechanic mechanic) {
         if (!mechanicRepository.existsById(id)) {
             throw new ResolutionException("Mecánico no encontrado con ID: " + id);
         }

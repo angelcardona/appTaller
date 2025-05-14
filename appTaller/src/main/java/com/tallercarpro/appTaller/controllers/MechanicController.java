@@ -1,4 +1,4 @@
-package com.tallercarpro.appTaller.Controllers;
+package com.tallercarpro.appTaller.controllers;
 
 import com.tallercarpro.appTaller.exception.ResourceNotfoundException;
 import com.tallercarpro.appTaller.models.domain.Mechanic;
@@ -37,7 +37,7 @@ public class MechanicController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Mechanic> updateMechanic(@PathVariable String id, @RequestBody Mechanic mechanic) {
-        Mechanic updatedMechanic = mechanicService.updateMechanic(Long.valueOf(id), mechanic);
+        Mechanic updatedMechanic = mechanicService.updateMechanic(id, mechanic);
         return new ResponseEntity<>(updatedMechanic, HttpStatus.OK);
     }
 

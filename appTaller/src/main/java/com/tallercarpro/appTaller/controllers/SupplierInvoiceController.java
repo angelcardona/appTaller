@@ -1,4 +1,4 @@
-package com.tallercarpro.appTaller.Controllers;
+package com.tallercarpro.appTaller.controllers;
 
 import com.tallercarpro.appTaller.exception.ResourceNotfoundException;
 import com.tallercarpro.appTaller.models.domain.SupplierInvoice;

@@ -1,9 +1,9 @@
 package com.tallercarpro.appTaller.service;
 
-import com.tallercarpro.appTaller.Repository.ClientRepository;
-import com.tallercarpro.appTaller.Repository.InvoiceRepository;
-import com.tallercarpro.appTaller.Repository.RepairRepository;
-import com.tallercarpro.appTaller.Repository.VehicleRepository;
+import com.tallercarpro.appTaller.repository.ClientRepository;
+import com.tallercarpro.appTaller.repository.InvoiceRepository;
+import com.tallercarpro.appTaller.repository.RepairRepository;
+import com.tallercarpro.appTaller.repository.VehicleRepository;
 import com.tallercarpro.appTaller.exception.BusinessException;
 import com.tallercarpro.appTaller.exception.ResourceNotfoundException;
 import com.tallercarpro.appTaller.exception.ValidationException;

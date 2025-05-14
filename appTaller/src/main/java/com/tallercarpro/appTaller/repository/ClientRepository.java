@@ -1,4 +1,4 @@
-package com.tallercarpro.appTaller.Repository;
+package com.tallercarpro.appTaller.repository;
 
 import com.tallercarpro.appTaller.models.domain.Client;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -17,10 +17,11 @@ public class SupplierInvoice {
    @ManyToOne(fetch = FetchType.LAZY)
    @JoinColumn(name = "supplier_id")
    private Supplier supplier;
-   @Column(name = "total",nullable = false)
+
    @ManyToOne(fetch = FetchType.LAZY)
    @JoinColumn(name = "vehicle_id")
    private Vehicle vehicle;
+    @Column(name = "total",nullable = false)
    private double total;
    @Column(name = "description",nullable = false)
    private String description;

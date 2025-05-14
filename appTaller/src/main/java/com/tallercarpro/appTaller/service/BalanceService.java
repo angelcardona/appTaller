@@ -1,7 +1,7 @@
 package com.tallercarpro.appTaller.service;
 
-import com.tallercarpro.appTaller.Repository.BalanceRepository;
-import com.tallercarpro.appTaller.Repository.InvoiceRepository;
+import com.tallercarpro.appTaller.repository.BalanceRepository;
+import com.tallercarpro.appTaller.repository.InvoiceRepository;
 import com.tallercarpro.appTaller.exception.ResourceNotfoundException;
 import com.tallercarpro.appTaller.exception.ValidationException;
 import com.tallercarpro.appTaller.models.domain.Balance;
